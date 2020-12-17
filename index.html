@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QRIDEIA | Tetes de Estágio</title>
+    <!--Ion página-->
+    <link rel="shortcut icon" href="assets/imgs/QRI.ico" type="image/x-icon">
+    <!--Ion Icons-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <!--Pastas CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/model.css">
+</head>
+<body>
+    <nav class="padding-all menu">
+        <div class="responsive-menu">
+            <img src="assets/imgs/logo.png" alt="Logo QRIDEIA">
+            <div class="nav-button">
+                <div class="line line_1"></div>
+                <div class="line line_2"></div>
+                <div class="line line_3"></div>
+            </div>
+        </div>
+        <ul class="menu-links">
+            <li><a class="active" href="#">Home</a></li>
+            <li><div class="ev"><a href="#">Eventos</a></div></li>
+            <li><div class="us"><a href="#">Usuários</a></div></li>
+            <li><div class="re"><a href="#">Relatórios</a></div></li>
+        </ul>
+        <div class="user">
+            <img src="assets/imgs/user.png" alt="">
+            <ul class="user-data">
+                <li class="username">Igor Gonçalves</li>
+                <li><a class="disconnect" href="#">Desconectar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="orange"></div>
+    <div class="content">
+        <p class="main-text">Olá <strong>Igor Gonçalves</strong>, selecione uma das opções abaixo:</p>
+        <div class="buttons">
+            <button class="event">
+                <img src="assets/imgs/icone-eventos.png" alt="">
+                <br><br>
+                <p>Meus eventos</p>
+            </button>
+            <button class="use">
+                <img src="assets/imgs/icone-usuarios.png" alt="">
+                <br>
+                <p>Usuários</p>
+            </button>
+            <button class="relat">
+                <img src="assets/imgs/icone-relatorios.png" alt="">
+                <br>
+                <p>Relatórios</p>
+            </button>
+        </div>
+    </div>
+    <!--Start Footer-->
+    <footer>
+        <p>
+            <a target="_blank" href="https://www.ideia2001.com.br/">Ideia 2001</a>
+            @ Copyright 2019 - Todos os direitos reservados
+        </p>
+    </footer>
+    <!--Footer end-->
+    
+    <!--********************************|Star Modal|********************************-->
+    <!------------------------------|Modal 1 - meus-eventos|--------------------------->
+    <div id="modal-eventos" class="modal-conteiner-eventos">
+        <div class="modal-agenda">
+            <form>
+                <button class="fechar">✖</button>
+                <div class="agenda">
+                    <h3>Meus eventos</h3><br>
+                    <div id="dfTabela">
+                        <form name="fEvento">
+                            <input type="date" name="txtData" class="data">
+                            <input type="time" name="txtHora" class="hora">
+                            <input type="text" placeholder="Nome do evento" name="textNome" id="input-name">
+                            <input type="button" class="btn_creat" value="Criar" onclick="cadEvento(txtData.value, textNome.value, txtHora.value)">
+                        </form>
+                    </div>
+                    <br>
+                    <div id="dtTabela">
+                        <table id="tbEvento">
+                            <thead>
+                                <tr>
+                                    <th>Evento</th>
+                                    <th>Data</th>
+                                    <th>Nome</th>
+                                    <th>Hora</h> 
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div class="agenda">
+                  <input class="btn_model" type="submit">
+                </div>
+              </form>
+        </div>
+    </div>
+    <!------------------------------|Modal 2 - usuários|--------------------------->
+    <div id="modal-usuarios" class="modal-conteiner-usuarios">
+        <div class="modal-cont">
+           <button class="fechar">✖</button>
+           <div class="contatos">
+           <h3>Usuários</h3><br>
+           <div class="lista-usuarios">
+                <ul>
+                  
+                    <li>
+                        <div class="pessoa">
+                            <a title="" href="https://www.linkedin.com/in/igor-gon%C3%A7alves-de-lima-2a90a4178/" target="_blank">
+                            <img class="circle" title="(icone usuario)" src="assets/imgs/user.png" alt="icone usuario"></a>
+                            <span class="title"><h4>Igor Gonçalves</h4><br>
+                                <a title="" href="https://www.linkedin.com/in/igor-gon%C3%A7alves-de-lima-2a90a4178/" target="_blank">
+                                Contato</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pessoa">
+                            <a title="" href="https://www.linkedin.com/in/henrique-soares/" target="_blank">
+                                <img class="circle" title="(icone usuario)"  src="assets/imgs/user.png" alt="icone usuario">
+                            </a>
+                                <span class="title"><h4>Henrique Soares</h4><br>
+                                    <a title="" href="https://www.linkedin.com/in/henrique-soares/" target="_blank">
+                                    Contato</a></span>
+                    </li>
+                    <li>
+                        <div class="pessoa">
+                            <a title="" href="https://www.linkedin.com/in/vin%C3%ADcius-bezerra-5ab5a2117/" target="_blank">
+                                <img class="circle" title="(icone usuario)" src="assets/imgs/user.png" alt="icone usuario">
+                            </a>
+                        <span class="title"><h4>Vinícius Bezerra</h4><br>
+                            <a title="" href="https://www.linkedin.com/in/vin%C3%ADcius-bezerra-5ab5a2117/" target="_blank">
+                            Contato</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!------------------------------|Modal 3 - relatorios|--------------------------->
+    <div id="modal-relatorios" class="modal-conteiner-relatorios">
+        <div class="modal-stor">
+            <button class="fechar">✖</button>
+            <h3>Relatório</h3><br>
+            <div class="contener_garf">
+                
+                <div class="grafico-conteiner">
+                   <div id="grafico"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var graf1 = {
+            x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            y:[8, 10, 15, 12, 16, 18, 20, 22, 24, 22],
+            mode: 'lines+markres',
+            type: 'scatter',
+        };
+        var graf2 = {
+            x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            y:[14, 15, 13, 14, 18, 15, 12, 10, 15, 12],
+            mode: 'lines+markres',
+            type: 'scatter',
+        };
+        var data = [graf1, graf2];
+        Plotly.newPlot('grafico', data);
+    </script>
+</body>
+</html>
